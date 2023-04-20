@@ -52,9 +52,9 @@ section{
 .navbar a{
     padding: 8px 17px;
     color: white;
-    font-size: 1rem;
+    font-size: 30px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .navbar a:hover{
@@ -72,7 +72,7 @@ section{
 }
 
 .header-icons button{
-  width: 50px;
+    width: 50px;
     color: white;
     background-color: rgb(255, 174, 0);
     border-radius: 9999px;
@@ -84,7 +84,7 @@ section{
 
 #menu-icon{
     color: white;
-    font-size: 24px;
+    font-size: 240px;
     cursor: pointer;
     display: none;
     z-index: 100001;
@@ -133,7 +133,7 @@ section{
 .home-text h1{
     font-family: 'Kanit', sans-serif; 
     font-size: 5rem;
-    color: rgb(190, 214, 196);
+    color: rgb(139, 172, 147);
     padding: 5px;
     -webkit-text-stroke: 2px black;
     text-shadow: 5px 5px 0px black;
@@ -428,17 +428,17 @@ section{
     
     .navbar a{
         padding: 15px 10px;
-        font-size: 1.1rem;
-        font-weight: 400;
+        font-size: 1.2rem;
+        font-weight: 500;
     }
     
     .header-icons {
-        font-size: 18px;
-        column-gap: 0.7rem;
+        font-size: 22px;
+        column-gap: 0.8rem;
     }
     
     .header-icons button{
-        width: 50px;
+        width: 55px;
     }
     
     #menu-icon{
@@ -447,11 +447,11 @@ section{
     
     .search-box input{
         padding: 15px;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     
     .search-box input::placeholder{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         font-weight: 500;
     }
 
@@ -511,11 +511,6 @@ section{
         padding-top: 8px;
     }
     
-    .navbar a{
-        font-size: 1rem;
-        font-weight: 200;
-    }
-    
     .header-icons {
         font-size: 15px;
         column-gap: 0.6rem;
@@ -538,10 +533,6 @@ section{
     .search-box input::placeholder{
         font-size: 0.6rem;
         font-weight: 400;
-    }
-
-    .navbar li{
-        font-size: 18px;
     }
 
     .products-container{
@@ -600,12 +591,6 @@ section{
         padding-top: 6px;
     }
     
-    .navbar a{
-        padding: 10px 9px;
-        font-size: 1rem;
-        font-weight: 400;
-    }
-    
     .header-icons {
         font-size: 1px;
         column-gap: 0.6rem;
@@ -662,20 +647,10 @@ section{
     width: 50px;
     padding-top: 5px;
 }
-
+   
 .navbar a{
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    font-weight: 400;
-}
-
-.header-icons {
-    font-size: 12px;
-    column-gap: 0.5rem;
-}
-
-#menu-icon{
-    font-size: 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .search-box input{
@@ -801,10 +776,12 @@ section{
     position: absolute;
     right: 150px;
     top: 2260px;
-}  
+} 
+
 .products-container{
     padding: 10px ;
 }
+
 .products-container .box{
     width: 130px;
 }
@@ -837,17 +814,6 @@ section{
     .logo{
         width: 50px;
         padding-top: 5px;
-    }
-    
-    .navbar a{
-        padding: 5px 10px;
-        font-size: 0.7rem;
-        font-weight: 400;
-    }
-    
-    .header-icons {
-        font-size: 12px;
-        column-gap: 0.5rem;
     }
     
     #menu-icon{
@@ -883,10 +849,6 @@ section{
 }
 
 @media(max-width:955px){
-    #join{
-        display: none;
-    }
-
     #about{
         display: none;
     }
@@ -895,12 +857,7 @@ section{
         width: 45px;
         padding-top: 5px;
     }
-    
-    .navbar a{
-        padding: 5px 10px;
-        font-size: 0.8rem;
-        font-weight: 400;
-    }
+
     .products-container{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(80px,180px));
@@ -910,10 +867,6 @@ section{
 }
 
 @media(max-width:870px){
-    #join{
-        display: none;
-    }
-
     #about{
         display: none;
     }
@@ -956,56 +909,9 @@ section{
     
 }
 
-@media(max-width:800px){
-    #join{
-        display: none;
-    }
-
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: none;
-    }
-
-    .logo{
-        width: 45px;
-        padding-top: 5px;
-    }
-    
-    .navbar a{
-        padding: 5px 10px;
-        font-size: 0.7rem;
-        font-weight: 400;
-    }
-    .products-container{
-        padding: 4px ;
-    }
-
-    .products-container{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(80px,150px));
-        gap: 0.8rem;
-        padding: 5px ;
-    }
-}
-
 @media(max-width:820px){
     #join{
         display: none;
-    }
-
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: block;
-    }
-
-    .header-icons input{
-    display: none;
     }
 
     .logo{
@@ -1023,23 +929,25 @@ section{
     }
 }
 
+@media(max-width:800px){
+    .logo{
+        width: 45px;
+        padding-top: 5px;
+    }
+
+    .products-container{
+        padding: 4px ;
+    }
+
+    .products-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(80px,150px));
+        gap: 0.8rem;
+        padding: 5px ;
+    }
+}
+
 @media(max-width:770px){
-    #join{
-        display: none;
-    }
-
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: none;
-    }
-
-    .header-icons input{
-    display: none;
-    }
-
     .logo{
         width: 45px;
         padding-top: 5px;
@@ -1050,12 +958,14 @@ section{
         font-size: 1rem;
         font-weight: 400;
     }
+
     .products-container{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(80px,130px));
         gap: 0.8rem;
         padding: 5px ;
     }
+
     .customers-container{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(110px,170px));
@@ -1067,26 +977,14 @@ section{
 
 
 @media(max-width:700px){
-    #join{
-        display: none;
-    }
-
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: none;
-    }
-
-    #user{
-        display: none;
-    }
-
     .header-icons input{
     display: none;
     }
 
+    #join{
+        display:block;
+    }
+    
     .logo{
         width: 45px;
         padding-top: 5px;
@@ -1097,6 +995,7 @@ section{
         font-size: 1rem;
         font-weight: 400;
     }
+
     .products-container{
         padding: 1px ;
     }
@@ -1107,8 +1006,18 @@ section{
         gap: 1.5rem;
         padding: 10px ;
     }
+
     .products-container .box{
         width: 180px;
+    }
+
+    .header-icons {
+        font-size: 52px;
+        cursor: pointer;
+        z-index: 1000;
+        display: flex;
+        column-gap: 0.8rem;
+        height: 60%;
     }
 }
 
@@ -1122,26 +1031,6 @@ section{
 }
 
 @media(max-width:620px){
-    #join{
-        display: none;
-    }
-
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: none;
-    }
-
-    #user{
-        display: none;
-    }
-
-    #lang{
-        display: none;
-    }
-
     .header-icons input{
     display: none;
     }
@@ -1181,30 +1070,6 @@ section{
         display: none;
     }
 
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: none;
-    }
-
-    #user{
-        display: none;
-    }
-
-    #lang{
-        display: none;
-    }
-
-    #signup{
-        display: none;
-    }
-
-    .header-icons input{
-    display: none;
-    }
-
     .logo{
         width: 45px;
         padding-top: 5px;
@@ -1218,38 +1083,10 @@ section{
 }
 
 @media(max-width:500px){
-    #join{
+    #home{
         display: none;
     }
-
-    #about{
-        display: none;
-    }
-
-    #reviews{
-        display: none;
-    }
-
-    #user{
-        display: none;
-    }
-
-    #lang{
-        display: none;
-    }
-
-    #signup{
-        display: none;
-    }
-
-    #signin{
-        display: none;
-    }
-
-    .header-icons input{
-    display: none;
-    }
-
+    
     .logo{
         width: 45px;
         padding-top: 5px;
