@@ -19,14 +19,14 @@ var font;
 
 var sfx = {
     song: new Howl({
-        src:["https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/blob/main/sfx/game%20song.mp3?raw=true","sfx/game song.wav"],
+        src:["sfx/game song.mp3","sfx/game song.wav"],
         loop:true
     }),
     gameOver: new Howl({
-        src:["https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/blob/main/sfx/Funny%20GAME%20OVER%20%20Free%20Sound%20Effect.mp3?raw=true","sfx/Funny GAME OVER  Free Sound Effect.wav"]
+        src:["sfx/Funny GAME OVER  Free Sound Effect.mp3","sfx/Funny GAME OVER  Free Sound Effect.wav"]
     }),
     jump: new Howl({
-        src:["https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/blob/main/sfx/Cartoon%20Jump%20Sound%20Effect.mp3?raw=true","sfx/Cartoon Jump Sound Effect.wav"]
+        src:["sfx/Cartoon Jump Sound Effect.mp3","sfx/Cartoon Jump Sound Effect.wav"]
     })
 
 }
@@ -34,9 +34,9 @@ var sfx = {
 function preload() {
 
     font=loadFont("fonts/SunnyspellsRegular-MV9ze.otf");
-    coufiImage= loadImage("https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/blob/main/images/kyufi%20.png?raw=true");
-    platImage = loadImage("https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/blob/main/images/game%20platform.png?raw=true");
-    backgroundImage = loadImage("https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/blob/main/images/game%20background.png?raw=true");
+    coufiImage= loadImage("kyufi .png");
+    platImage = loadImage("game platform.png");
+    backgroundImage = loadImage("game background.png");
 }
 
 function setup() {
