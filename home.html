@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link href="@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,900;1,400;1,500;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');" rel="stylesheet">
+    <link href="@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,900;1,400;1,500;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');" rel="stylesheet">  
 </head>
 <body>
     <header>
@@ -21,32 +21,144 @@
             <li id="reviews"><a href="#customers">Reviews</a></li>
             <li><a href="#about">PLAY</a></li>
             <li id="join"><a href="#join">JOIN US</a></li>
-            <li id="abouticon"><a href="#about">About Us</a></li>
+            <li id="abouticon"><a href="#about">About</a></li>
         </ul>
         <div class="header-icons">
             <button><i class="fas fa-shopping-cart" id="cart-btn"></i>  0</button>
-            <button><i class="fas fa-search" id="search-btn"></i></button>
-            <input type="text" style="border-radius: 500px; padding: 8px; color: black;" placeholder="Search drinks, stores...">
+            <button id="search-btn"><i class="fas fa-search" ></i></button>
+            <input id="search-input" onkeyup="search()" type="text" placeholder="Search drinks, stores...">
             <button id="lang"><i class="fas fa-globe"></i></button>  
             <button id="user"><i class="fa-solid fa-user"></i></button> 
-        </div> 
+        </div>
     </header>
-    <section class="home" id="home">
+    <section class="home">
         <div class="home-text">
-            <h1>Start your <br>day with <br> a coffee</h1>
+            <h1>Start <br> your day <br> with a <br> coffee</h1>
             <br>
             <p> <b> Today's good mood is sponsored by our coffee.</b></p>
             <br>
-            <a href="" class="btn" id="btn0">Shop now</a>
+            <a href="" class="btn" id="fbtn">Shop now</a>
             <a href="" class="btn">Find nearest store</a>
-        </div>  
-    </div>
+        </div>
+
+        <div class="product-list">
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img1.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Frappuccino</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img2.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>CARAMEL COFFEE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img2.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>CARAMEL COFFEE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img2.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>CARAMEL COFFEE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img3.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>ICED COFFEE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img4.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>STRAWBERRY JUICE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img5.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>GERMAN CAKE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img6.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>CHOCOLATE DONUTS</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img7.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>CHOCOLATE CAKE</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="http://example.com" class="product-link">
+                  <img src="images/img8.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>OUR COOKIES</b></p>
+                    <h3 class="product-price">$25</h3>
+                  </div>
+                </a>
+            </div>
+        </div>
     </section>
+
     <section>
         <div>
             <img src="images/img.png" alt="">
         </div>
     </section>
+
     <section class="products" id="products">
         <div class="heading">
             <h2>Our popular products :</h2>
@@ -176,10 +288,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p>The Starbucks on Newman, Lasalle, Quebec has the best customer service anywhere. I go by there every other day before noon to get a coffee or a sandwich and the person at the window is such a delight to deal with along with all other employees. They always have a great attitude.</p>
+                <p>The KYOUFI on Newman, Lasalle, Quebec has the best customer service anywhere. I go by there every other day before noon to get a coffee or a sandwich and the person at the window is such a delight to deal with along with all other employees. They always have a great attitude.</p>
                 <h2>Marlin Dior</h2>
                 <img src="images/rev3.jpg" alt="">
             </div>
+        </div>
+        <div class="rateus">
+            <button><a href="rate.html">Rate Us</a></button>
         </div>
     </section>
     
@@ -209,7 +324,7 @@
         <div class="footer-box">
             <h3>Support :</h3>
             <li><a href="">Products</a></li>
-            <li><a href="">Help & Support</a></li>
+            <li><a href="rate.html">Help & Support</a></li>
             <li><a href="">Return Policy</a></li>
             <li><a href="">Terms of use</a></li>
         </div>
@@ -232,11 +347,6 @@
     <div class="copyright">
         <p>&#169; CarpoolVenom All Rights Reserved 2023</p>
     </div>
-  <script src="SignUpButton.js"></script>
 </body>
+<script src="search.js"></script>
 </html>
-
-
-
-
-
