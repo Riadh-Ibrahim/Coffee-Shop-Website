@@ -6,7 +6,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-<link rel="stylesheet" type="text/css" href="joinstyle.css">
+<link rel="stylesheet" type="text/css" href="./styles/joinus.css">
 <style>
 .error {color: #FF0000;}
 
@@ -236,6 +236,6 @@
  <label class="t"><b >  Don't have an account?    </b></label>
   <a href="" class="link" > Sign up </a>
 </div>
-<script src="buttons.js"></script>
+<script src="./joiuns.js"></script>
 </body>
 </html>
