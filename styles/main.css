@@ -18,10 +18,12 @@ img{
 
 body{
     color: black;
+    background-color: #fffff0;
 }
 
 header{
     position: fixed;
+    height: 10%;
     width: 100%;
     top: 0;
     right: 0;
@@ -32,16 +34,18 @@ header{
     padding: 18px 100px;
     transition: 0.5s linear;
     background-color: rgb(134, 80, 53);
-    height: 10%;
 }
 
 section{
     padding: 50px 100px;
 }
 
-.logo{
+.logo {
     width: 60px;
-    padding-top: 10px;
+}
+
+.logo img{
+    border-radius: 50%;
 }
 
 .navbar{
@@ -51,9 +55,12 @@ section{
 .navbar a{
     padding: 8px 17px;
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     text-transform: uppercase;
-    font-weight: 600;
+    text-decoration:none;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 2px;
 }
 
 .navbar a:hover{
@@ -78,7 +85,7 @@ section{
 }
 
 .header-icons button:hover{
-  background-color: rgb(241, 60, 60);
+    background-color: rgb(241, 60, 60);
 }
 
 #menu-icon{
@@ -90,70 +97,25 @@ section{
 }
 
 #search-input{
-    border-radius: 500px; padding: 8px; color: black;"
-}
-
-.home{
-    width: 100%;
-    min-height: 100vh;
-    background: url(images/img1000.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,40rem));
-    gap: 1.5rem;
-}
-
-.home-text h1{
-    font-family: 'Kanit', sans-serif; 
-    font-size: 5rem;
-    color: rgb(197, 212, 201);
-    padding: 5px;
-    -webkit-text-stroke: 2px black;
-    text-shadow: 5px 5px 0px black;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-top: 80px;
-    padding-left: 100px;
-}
-
-.home-text p{
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: rgb(0, 0, 0);
-    margin: 0.5rem 0 1.4rem;
-    padding-left: 100px;
-    -webkit-text-stroke: 0.7px rgb(223, 213, 213);
-}
-
-#btn0{
-    margin-left: 100px;
-}
-
-.btn{
-    padding: 10px 40px;
-    border-radius: 0.3rem;
-    background-color: rgb(134, 80, 53);
-    color: white;
-    font-weight: 600;
-}
-
-.btn:hover{
-    background: rgb(255, 145, 0)
+    border-radius: 500px; 
+    padding: 8px; 
+    color: black;
 }
 
 .product-list {
     padding: 15px 0;
-    margin-top: 30px;
-    margin-left: 300px;
-    width: 50%;
+    width: 21%;
     height: min-content;
     background-color: rgb(186, 219, 236);
     overflow-y:scroll ;
     border-radius: 10px;
     display: none;
-    max-height: 80%;}
+    max-height: 80%;
+    position: absolute;
+    top: 60px;
+    right: 190px;
+    border: 5px solid #1c0303;
+}
 
 .product{
     display: flex;
@@ -193,6 +155,54 @@ section{
     height: 60px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.home{
+    background: url(../images/background.png);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,40rem));
+    gap: 1.5rem;
+}
+
+.home-text h1{
+    font-family: 'Kanit', sans-serif; 
+    font-size: 6rem;
+    color: rgb(197, 212, 201);    
+    -webkit-text-stroke: 2px black;
+    text-shadow: 5px 5px 0px black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-top: 80px;
+    margin-left: 180px;
+}
+
+.home-text p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    margin: 0.5rem 0 1.4rem;
+    margin-left: 180px;
+}
+
+#fbtn{
+    margin-left: 35%;
+}
+
+.btn{
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background-color: rgb(176, 73, 17);
+    color: white;
+    font-weight: 600;
+}
+
+.btn:hover{
+    background: rgb(255, 145, 0);
 }
 
 .about {
@@ -374,10 +384,29 @@ section{
     transition: 0.1s all linear;
 }
 
-#reviews-container {
-    position: relative;
+.rateus button a{
+    text-decoration: none;
+    color:white;
 }
 
+.rateus button{
+    display: inline-block;
+    background-color: #cb4b27;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 600px;
+    width: 150px;
+}
+  
+.rateus button:hover {
+    background-color: rgb(255, 145, 0);
+}
+  
 .footer{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px,300px));
@@ -461,8 +490,8 @@ section{
         padding: 30px 80px;
     }
     
-    .logo{
-        padding-top: 10px;
+    .logo img {
+        margin-top: 5px;
     }
     
     .navbar a{
@@ -497,7 +526,7 @@ section{
 
     .products-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(100px,260px));
+        grid-template-columns: repeat(auto-fit,minmax(100px,320px));
         gap: 1rem;
         padding: 10px ;
         align-items: center;
@@ -527,7 +556,7 @@ section{
 
     .customers-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(110px,260px));
+        grid-template-columns: repeat(auto-fit,minmax(110px,320px));
         gap: 1.5rem;
         margin-top: 2rem;
     }
@@ -1002,6 +1031,10 @@ section{
         margin-top: 2rem;
     }
 
+    #fbtn{
+        margin-left: 20px;
+    }
+
 }
 
 
@@ -1127,3 +1160,26 @@ section{
         font-weight: 400;
     }
 }
+
+
+
+@media only screen and (max-width: 1968px) {
+    header {
+      padding: 18px 50px;
+    }
+    .home-text h1 {
+      font-size: 3.5rem;
+      padding-left: 50px;
+    }
+    .home-text p {
+      font-size: 1rem;
+      padding-left: 50px;
+    }
+    #btn0 {
+      margin-left: 50px;
+    }
+    .product-list {
+      margin-left: 50px;
+    }
+  }
+  
