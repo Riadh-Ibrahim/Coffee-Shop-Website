@@ -24,7 +24,14 @@
             <li id="abouticon"><a href="#about">About</a></li>
         </ul>
         <div class="header-icons">
-            <button><i class="fas fa-shopping-cart" id="cart-btn"></i>  0</button>
+            <button id="shopping"><i class="fas fa-shopping-cart" id="cart-btn"></i><span id="cart-count"> 0</span></button>
+            <script>
+                    const cartButton = document.querySelector('#shopping');
+                    cartButton.addEventListener('click', () => {
+                    window.location.href = 'shopping cart.html';
+                    });
+            </script>
+                
             <button id="search-btn"><i class="fas fa-search" ></i></button>
             <input id="search-input" onkeyup="search()" type="text" placeholder="Search drinks, stores...">
             <button id="lang"><i class="fas fa-globe"></i></button>  
@@ -170,7 +177,7 @@
                 </a>
                 <div class="content">
                     <span>$25</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="#">Add to cart</a>
                 </div>
             </div>
 
@@ -180,7 +187,7 @@
                 </a>
                 <div class="content">
                     <span>$25</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
             </div>
 
@@ -190,7 +197,7 @@
                 </a>
                 <div class="content">
                     <span>$25</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
             </div>
             
@@ -200,16 +207,16 @@
                 </a>
                 <div class="content">
                     <span>$15</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
             </div>
             <div class="box">
-                <a href=""><img src="images/img5.jpg" alt="">
+                <a class="add-to-cart" href=""><img src="images/img5.jpg" alt="">
                     <h3>German cake</h3>
                 </a>
                 <div class="content">
                     <span>$35</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
             </div>
             <div class="box">
@@ -218,7 +225,7 @@
                 </a>
                 <div class="content">
                     <span>$20</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
             </div>
             <div class="box">
@@ -227,7 +234,7 @@
                 </a>
                 <div class="content">
                     <span>$20</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
             </div>
             <div class="box">
@@ -236,9 +243,11 @@
                 </a>
                 <div class="content">
                     <span>$25</span>
-                    <a href="#">Add to cart</a>
+                    <a class="add-to-cart" href="./shopping cart.html">Add to cart</a>
                 </div>
-                <button class="btn1">View More Products</button>
+            </div>
+            <div class="rateus">
+                <button style="width: 80%; font-weight: 450; margin-left: 160%;"><a href="">View More Products</a></button>
             </div>
         </div>
     </section>
@@ -287,7 +296,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p>The KYOUFI on Newman, Lasalle, Quebec has the best customer service anywhere. I go by there every other day before noon to get a coffee or a sandwich and the person at the window is such a delight to deal with along with all other employees. They always have a great attitude.</p>
+                <p>The KYUFI on Newman, Lasalle, Quebec has the best customer service anywhere. I go by there every other day before noon to get a coffee or a sandwich and the person at the window is such a delight to deal with along with all other employees. They always have a great attitude.</p>
                 <h2>Marlin Dior</h2>
                 <img src="images/rev3.jpg" alt="">
             </div>
@@ -344,8 +353,8 @@
         </div>
     </section>
     <div class="copyright">
-        <p>&#169; CarpoolVenom All Rights Reserved 2023</p>
-    </div>
+        <p>&#169; RT2 G3 All Rights Reserved 2023</p>
+    </div>	
 </body>
 <script src="search.js"></script>
 </html>
