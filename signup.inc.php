@@ -17,9 +17,9 @@ if(isset($_POST["submit"]))
 
 
     //Instanciating Signup contr class
-    include "../classes/dbh.classes.php";
-    include "../classes/signup.classes.php";
-    include "../classes/sign-contr.classes.php";
+    include "./dbh.classes.php";
+    include "./signup.classes.php";
+    include "./sign-contr.classes.php";
     
 
     $signup= new SignupContr($uid, $pwd, $pwdRepeat, $email,$tel/* ,$city */,$address);
@@ -28,7 +28,7 @@ if(isset($_POST["submit"]))
        $signup->signupUser();
 
     //Going back to front page
-        header("Location: ../index.php?error=none");
+        header("Location: ./index.php?error=none");
     }
 
 

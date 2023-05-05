@@ -3,6 +3,7 @@
 class Signup extends Dbh{
 
 
+    /*
     protected function checkUser($uid,$email,$tel) {
 
         $stmt=$this->connect()->prepare("SELECT users_id FROM users WHERE users_uid = ? OR users_email= ? OR users_tel= ?;");
@@ -23,6 +24,72 @@ class Signup extends Dbh{
         }
         return $resultCheck;
     }
+*/
+
+protected function checkUid($uid) {
+
+    $stmt=$this->connect()->prepare("SELECT users_id FROM users WHERE users_uid = ?;");
+
+    if(!$stmt->execute(array($uid))) {
+
+        $stmt=null;
+        header("Location: ../index.php?error=stmtFailed");
+        exit();
+    }
+
+    $resultCheck=false;
+
+    if($stmt->rowCount() > 0) {
+        $resultCheck=false;
+    } else {
+        $resultCheck=true;
+    }
+    return $resultCheck;
+}
+
+
+protected function checkTel($tel) {
+
+    $stmt=$this->connect()->prepare("SELECT users_id FROM users WHERE users_tel = ?;");
+
+    if(!$stmt->execute(array($tel))) {
+
+        $stmt=null;
+        header("Location: ../index.php?error=stmtFailed");
+        exit();
+    }
+
+    $resultCheck=false;
+
+    if($stmt->rowCount() > 0) {
+        $resultCheck=false;
+    } else {
+        $resultCheck=true;
+    }
+    return $resultCheck;
+}
+
+
+protected function checkEmail($email) {
+
+    $stmt=$this->connect()->prepare("SELECT users_id FROM users WHERE users_email = ?;");
+
+    if(!$stmt->execute(array($email))) {
+
+        $stmt=null;
+        header("Location: ../index.php?error=stmtFailed");
+        exit();
+    }
+
+    $resultCheck=false;
+
+    if($stmt->rowCount() > 0) {
+        $resultCheck=false;
+    } else {
+        $resultCheck=true;
+    }
+    return $resultCheck;
+}
 
 
 

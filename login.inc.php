@@ -13,9 +13,9 @@ if(isset($_POST["submit_login"]))
     echo $uid_login;
     echo $pwd_login;
     //Instanciating Signup contr class
-    include "../classes/dbh.classes.php";
-    include "../classes/login.classes.php";
-    include "../classes/login-contr.classes.php";
+    include "./dbh.classes.php";
+    include "./login.classes.php";
+    include "./login-contr.classes.php";
     
 
     $login= new LoginContr($uid_login, $pwd_login);
@@ -28,6 +28,6 @@ if(isset($_POST["submit_login"]))
        } else {echo "working";}*/
 
     //Going back to front page
-        header("Location: ../index.php?error=none");
+        header("Location: ./home.php?error=none");
     }
 

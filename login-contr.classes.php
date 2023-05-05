@@ -24,7 +24,8 @@ class LoginContr extends Login{
         
         if($this->emptyInput() == false) {
             //echo "Empty Input!"
-            header("Location: ../index.php?error=emptyinput");
+            $_SESSION["login_empty"]="Please Fill in the forms!";
+            header("Location: ./login.php?error=emptyinput");
             exit();
         }
         

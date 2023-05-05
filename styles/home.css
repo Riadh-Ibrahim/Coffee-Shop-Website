@@ -157,6 +157,10 @@ section{
     border-radius: 5px;
 }
 
+#cart-count {
+    display: inline;
+}
+
 .home{
     background: url(../images/background.png);
     width: 100%;
@@ -265,7 +269,10 @@ section{
     justify-content: center;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
-   width: 80%;
+    width: 80%;
+    background-color: rgb(247, 218, 243);
+    box-shadow:  0 5px 25px rgba(1 1 1 / 20%);
+
 }
 
 .products-container img{
@@ -283,6 +290,7 @@ section{
     font-weight: 600;
     text-transform: uppercase;
     margin: 0.5rem 0 0.5rem;
+    text-align: center;
 }
 
 .products-container .box .content{
@@ -479,8 +487,6 @@ section{
     background-color: #8a6f4dad;
 }
 
-
-
 @media(max-width:1700px){
     header{
         padding: 7px 30px;
@@ -569,6 +575,10 @@ section{
 }
 
 @media(max-width:1300px){
+    .rateus{
+        margin-left: 10%;
+        font-size: 5px;
+    }
     header{
         padding: 6px 25px;
     }

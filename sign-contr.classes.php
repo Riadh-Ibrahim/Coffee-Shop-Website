@@ -61,10 +61,41 @@ class SignupContr extends SignUp{
         }
         return $result;
     }
-
+/*
     private function uidTakenCheck(){
         $result=false;
         if(!($this->checkUser($this->uid,$this->email,$this->tel))){
+            $result=false;
+        } else {
+            $result=true;
+        }
+        return $result;
+    }
+    */
+
+    private function uidTakenCheck(){
+        $result=false;
+        if(!($this->checkUid($this->uid))){
+            $result=false;
+        } else {
+            $result=true;
+        }
+        return $result;
+    }
+
+    private function emailTakenCheck(){
+        $result=false;
+        if(!($this->checkEmail($this->email))){
+            $result=false;
+        } else {
+            $result=true;
+        }
+        return $result;
+    }
+
+    private function telTakenCheck(){
+        $result=false;
+        if(!($this->checkTel($this->tel))){
             $result=false;
         } else {
             $result=true;
@@ -98,7 +129,7 @@ class SignupContr extends SignUp{
         if($this->emptyInput() == false) {
             //echo "Empty Input!"
             $_SESSION["emptyerror"]="Please Fill in all the required forms !";
-            header("Location: ../signup.php?error=emptyinput");
+            header("Location: ./signup.php?error=emptyinput");
             exit();
         }
 
@@ -106,7 +137,7 @@ class SignupContr extends SignUp{
             //echo "invalid UID !"
             $_SESSION["invaliduiderror"]="Invalid UID";
             $_SESSION["wronguid"]=$this->uid;
-            header("Location: ../signup.php?error=username");
+            header("Location: ./signup.php?error=username");
             exit();
         } 
         
@@ -120,7 +151,7 @@ class SignupContr extends SignUp{
             //echo "invalid Email!"
             $_SESSION["invalidemailerror"]="Invalid Email";
             $_SESSION["wrongemail"]=$this->email;
-            header("Location: ../signup.php?error=email");
+            header("Location: ./signup.php?error=email");
             exit();
         }
 
@@ -133,7 +164,7 @@ class SignupContr extends SignUp{
                 //echo "invalid Tel !"
                 $_SESSION["invalidtelerror"]="Invalid Phone Number";
                 $_SESSION["wrongtel"]=$this->tel;
-                header("Location: ../signup.php?error=tel");
+                header("Location: ./signup.php?error=tel");
                 exit();
             } 
             
@@ -145,7 +176,7 @@ class SignupContr extends SignUp{
                     //echo "invalid Address !"
                     $_SESSION["invalidaddresserror"]="Invalid Address";
                     $_SESSION["wrongaddress"]=$this->address;
-                    header("Location: ../signup.php?error=address");
+                    header("Location: ./signup.php?error=address");
                     exit();
                 } 
                 
@@ -159,7 +190,7 @@ class SignupContr extends SignUp{
             //echo "Passwords don't match!"
             $_SESSION["pwdmatcherror"]="Password and Repeat Password don't match";
             $_SESSION["wrongpwd"]=$this->pwd;
-            header("Location: ../signup.php?error=passwordmatch");
+            header("Location: ./signup.php?error=passwordmatch");
             exit();
         }
 
@@ -169,13 +200,37 @@ class SignupContr extends SignUp{
             }
         
         
-        if($this->uidTakenCheck() == false) {
+        /* if($this->uidTakenCheck() == false) {
             //echo "uidTaken!"
             $_SESSION["uidtakenerror"]="UID Taken";
             $_SESSION["takenuid"]=$this->uid;
             $_SESSION["takenemail"]=$this->email;
             $_SESSION["takentel"]=$this->tel;
             header("Location: ../signup.php?error=useroremailorteltaken");
+            exit();
+        } */
+
+        if($this->uidTakenCheck() == false) {
+            //echo "uidTaken!"
+            //$_SESSION["uidtakenerror"]="UID Taken";
+            $_SESSION["uidtaken"]=$this->uid;
+            header("Location: ./signup.php?error=uidtaken");
+            exit();
+        }
+
+        if($this->emailTakenCheck() == false) {
+            //echo "uidTaken!"
+            //$_SESSION["uidtakenerror"]="UID Taken";
+            $_SESSION["emailtaken"]=$this->email;
+            header("Location: ./signup.php?error=emailtaken");
+            exit();
+        }
+
+        if($this->telTakenCheck() == false) {
+            //echo "uidTaken!"
+            //$_SESSION["uidtakenerror"]="UID Taken";
+            $_SESSION["teltaken"]=$this->tel;
+            header("Location: ./signup.php?error=teltaken");
             exit();
         }
 
