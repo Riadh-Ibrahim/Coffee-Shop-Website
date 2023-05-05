@@ -1,4 +1,3 @@
-
 var coufiS = 85;
 var coufiXpos;
 var coufiXspeed = 4.3;
