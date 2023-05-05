@@ -16,7 +16,7 @@
         </a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <ul class="navbar">
-            <li id="home"><a href="#home">Home</a></li>
+            <li id="home"><a href="#home1">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li id="reviews"><a href="#customers">Reviews</a></li>
             <li><a href="./kyufi game.html">PLAY</a></li>
@@ -36,9 +36,15 @@
             <input id="search-input" onkeyup="search()" type="text" placeholder="Search drinks, stores...">
             <button id="lang"><i class="fas fa-globe"></i></button>  
             <button id="user"><i class="fa-solid fa-user"></i></button> 
+            <script>
+                let globe=document.getElementById('lang');
+                globe.addEventListener('click', function(){
+                    window.location.href="./traduction.html";
+                });
+            </script>
         </div>
     </header>
-    <section class="home">
+    <section class="home" id="home1">
         <div class="home-text">
             <h1>Start <br> your day <br> with a <br> coffee</h1>
             <br>
