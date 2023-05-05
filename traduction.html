@@ -7,10 +7,9 @@
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="traductionstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    
-    <link href="@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,900;1,400;1,500;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');" rel="stylesheet">
+    <link href="@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,900;1,400;1,500;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');" rel="stylesheet">  
 </head>
-<body style="background-color: #fffff0;">
+<body>
     <header>
         <a href="#about" class="logo">
             <img src="images/logo.png" alt="">
@@ -20,19 +19,26 @@
             <li id="home"><a href="#home">Accueil</a></li>
             <li><a href="#products">Produits</a></li>
             <li id="reviews"><a href="#customers">Avis</a></li>
-            <li><a href="#about">Jouer</a></li>
-            <li id="join"><a href="#join">Rejoignez-nous</a></li>
-            <li id="abouticon"><a href="#about">Infos</a></li>
+            <li><a href="./kyufi game.html">Jouer</a></li>
+            <li id="join"><a href="./joinus.php">Rejoignez-nous</a></li>
+            <li id="abouticon"><a href="#about">Aide</a></li>
         </ul>
         <div class="header-icons">
-            <button><i class="fas fa-shopping-cart" id="cart-btn"></i>  0</button>
-            <button><i class="fas fa-search" id="search-btn"></i></button>
-            <input type="text" style="border-radius: 500px; padding: 8px; color: black;" placeholder="Rechercher dans la selection de cafés,...">
+            <button id="shopping"><i class="fas fa-shopping-cart" id="cart-btn"></i><span id="cart-count"> 0</span></button>
+            <script>
+                    const cartButton = document.querySelector('#shopping');
+                    cartButton.addEventListener('click', () => {
+                    window.location.href = 'shopping cart.html';
+                    });
+            </script>
+                
+            <button id="search-btn"><i class="fas fa-search" ></i></button>
+            <input id="search-input" onkeyup="search()" type="text" placeholder="Search drinks, stores...">
             <button id="lang"><i class="fas fa-globe"></i></button>  
             <button id="user"><i class="fa-solid fa-user"></i></button> 
-        </div> 
+        </div>
     </header>
-    <section class="home" id="home">
+    <section class="home">
         <div class="home-text">
             <h1>Commencez <br>Votre Journée <br> Avec un café </h1>
             <br>
@@ -40,100 +46,302 @@
             <br>
             <a href="" class="btn" id="btn0">Découvrir notre collection</a>
             <a href="" class="btn">Boutique la plus proche</a>
-        </div>  
-    </div>
+        </div>
+
+        <div class="product-list">
+            <div class="product">
+                <a href="./Frappucino.html" class="product-link">
+                  <img src="./images/img1.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Frappuccino</b></p>
+                    <h3 class="product-price">8 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Caramel-Coffee.html" class="product-link">
+                  <img src="./images/img2.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Caramel Coffee</b></p>
+                    <h3 class="product-price">7.5 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Iced-Coffee.html" class="product-link">
+                  <img src="./images/img3.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Iced Coffee</b></p>
+                    <h3 class="product-price">6 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Strawberry-juice.html" class="product-link">
+                  <img src="./images/img4.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Strawberry Juice</b></p>
+                    <h3 class="product-price">12 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Coffea-arabica.html" class="product-link">
+                  <img src="./images/Arabica.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Coffee Arabica</b></p>
+                    <h3 class="product-price">5.99 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Americano.html" class="product-link">
+                  <img src="./images/Americano.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Americano</b></p>
+                    <h3 class="product-price">4.99 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Espresso.html" class="product-link">
+                  <img src="./images/Espresso.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Espresso</b></p>
+                    <h3 class="product-price">3.99 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./mango-Juice.html" class="product-link">
+                  <img src="./images/Mango.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Mango Juice</b></p>
+                    <h3 class="product-price">12 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Hot-Tea.html" class="product-link">
+                  <img src="./images/T.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Hot Tea</b></p>
+                    <h3 class="product-price">4.5 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./German-cake.html" class="product-link">
+                  <img src="./images/img5.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>German Cake</b></p>
+                    <h3 class="product-price">19.99 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Chocolate-Donuts.html" class="product-link">
+                  <img src="./images/img6.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Chocolate Donuts</b></p>
+                    <h3 class="product-price">4.99 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+
+            <div class="product">
+                <a href="./Chocolate-cake.html" class="product-link">
+                  <img src="./images/img7.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Chocolate Cake</b></p>
+                    <h3 class="product-price">3.99 DT</h3>
+                  </div>
+                </a>    
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="./Our-cookies.html" class="product-link">
+                  <img src="./images/img8.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Nos Patisseries</b></p>
+                    <h3 class="product-price">9.5 DT</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="./red-velvet.html" class="product-link">
+                  <img src="./images/red-velvet.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Red Velvet</b></p>
+                    <h3 class="product-price">5.5 DT</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="./cupcakes.html" class="product-link">
+                  <img src="./images/CUpcakes.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Cupcakes</b></p>
+                    <h3 class="product-price">6.99 DT</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="./Black-forest.html" class="product-link">
+                  <img src="./images/Black-forest.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Black Forest Cake</b></p>
+                    <h3 class="product-price"> 22.99 DT</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="./Genoise-sponge.html" class="product-link">
+                  <img src="./images/Genoise-sponge.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Genoise Sponge</b></p>
+                    <h3 class="product-price">17.99 DT</h3>
+                  </div>
+                </a>
+            </div>
+            <hr style="color: aliceblue;">
+            
+            <div class="product">
+                <a href="./pancakes.html" class="product-link">
+                  <img src="./images/Pancakes.jpg" alt="" class="product-image">
+                  <div class="product-details">
+                    <p class="product-name"><b>Pancakes</b></p>
+                    <h3 class="product-price">12.5 DT</h3>
+                  </div>
+                </a>
+            </div>
+        </div>
     </section>
+
     <section>
         <div>
             <img src="images/img.png" alt="">
         </div>
     </section>
+
     <section class="products" id="products">
         <div class="heading">
-            <h2>Produits Populaires :</h2>
+            <h2>Produits Populaires:</h2>
         </div>
         <div class="products-container">
             <div class="box">
-                <a href=""><img src="images/img1.jpg" alt="">
+                <a href="./Frappucino.html"><img src="images/img1.jpg" alt="">
                     <h3>Frappuccino</h3>
                 </a>
                 <div class="content">
-                    <span>$25</span>
-                    <a href="#">Ajouter au Panier</a>
+                    <span>8 DT</span>
+                    <a class="add-to-cart" href="#">Ajouter au panier</a>
                 </div>
             </div>
 
             <div class="box">
-                <a href=""><img src="images/img2.webp" alt="">
+                <a href="./Caramel-Coffee.html"><img src="images/img2.jpg" alt="">
                     <h3>Caramel coffee</h3>
                 </a>
                 <div class="content">
-                    <span>$25</span>
-                    <a href="#">Ajouter au panier</a>
+                    <span>7.5 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
             </div>
 
             <div class="box">
-                <a href=""><img src="images/img3.jpg" alt="">
+                <a href="./Iced-Coffee.html"><img src="images/img3.jpg" alt="">
                     <h3>Iced coffee</h3>
                 </a>
                 <div class="content">
-                    <span>$25</span>
-                    <a href="#">Ajouter au panier </a>
+                    <span>6 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
             </div>
             
             <div class="box">
-                <a href=""><img src="images/img4.jpg" alt="">
+                <a href="./Strawberry-juice.html"><img src="images/img4.jpg" alt="">
                     <h3>Strawberry juice</h3>
                 </a>
                 <div class="content">
-                    <span>$15</span>
-                    <a href="#">Ajouter au panier</a>
+                    <span>12 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
             </div>
             <div class="box">
-                <a href=""><img src="images/img5.jpg" alt="">
+                <a class="add-to-cart" href="./German-cake.html"><img src="images/img5.jpg" alt="">
                     <h3>German cake</h3>
                 </a>
                 <div class="content">
-                    <span>$35</span>
-                    <a href="#">Ajouter au panier</a>
+                    <span>19.99 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
             </div>
             <div class="box">
-                <a href=""><img src="images/img6.jpg" alt="">
+                <a href="./Chocolate-Donuts.html"><img src="images/img6.jpg" alt="">
                     <h3>Chocolate donuts</h3>
                 </a>
                 <div class="content">
-                    <span>$20</span>
-                    <a href="#">Ajouter au panier</a>
+                    <span>4.99 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
             </div>
             <div class="box">
-                <a href=""><img src="images/img7.jpg" alt="">
+                <a href="./Chocolate-cake.html"><img src="images/img7.jpg" alt="">
                     <h3>Chocolate cake</h3>
                 </a>
                 <div class="content">
-                    <span>$20</span>
-                    <a href="#">Ajouter au panier</a>
+                    <span>3.99 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
             </div>
             <div class="box">
-                <a href=""><img src="images/img8.jpg" alt="">
+                <a href="./Our-cookies.html"><img src="images/img8.jpg" alt="">
                     <h3>Our cookies</h3>
                 </a>
                 <div class="content">
-                    <span>$25</span>
-                    <a href="#">Ajouter au panier</a>
+                    <span>9.5 DT</span>
+                    <a class="add-to-cart" href="./shopping cart.html">Ajouter au panier</a>
                 </div>
-                <button class="btn1">Plus de produits</button>
+            </div>
+            <div class="rateus">
+                <button style="width: 80%; font-weight: 450; margin-left: 130%;"><a href="./Products-Page-2.html">Plus de Produits</a></button>
             </div>
         </div>
     </section>
     <section class="customers" id="customers">
         <div class="heading">
-            <h2>Les avis de nos clients :</h2>
+            <h2>Avis de la clientèle:</h2>
         </div>
         <div class="customers-container">
             <div class="box">
@@ -142,11 +350,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half"></i>
                 </div>
-                <p>Un espace beinveillant que je recommande vivement. L'ambiance est vraiment chaude et sympathique et le service est très chaleureux et gentils</p>
-                <h2>Leo Messi</h2>
-                <img src="images/rev1.jpg" alt="">
+                <p>La première fois que j'ai essayé le café de "KYUFI - كيوفي", je suis instantanément tombé amoureux de son goût mais aussi de sopn prix! Je suis un client fidèle et je vous mens pas, cette marque ne cesse point de m'impressionner .</p>
+                <h2>andreas christensen</h2>
+                <img src="images/rev4.jpg" alt="">
             </div>
             <div class="box">
                 <div class="stars">
@@ -182,6 +389,9 @@
                 <img src="images/rev3.jpg" alt="">
             </div>
         </div>
+        <div class="rateus">
+            <button><a href="rate.html">Laisser un avis</a></button>
+        </div>
     </section>
     
     <section class="about" id="about">
@@ -198,8 +408,8 @@
     </section>
     <section class="footer">
         <div class="footer-box">
-            <h2>Réseaux sociaux :</h2>
-            <p>Contactez-nous:</p>
+            <h2>Reseaux Sociaux :</h2>
+            <p>Contactez-Nous :</p>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -231,13 +441,9 @@
         </div>
     </section>
     <div class="copyright">
-        <p>&#169; RT2/3 All Rights Reserved 2023</p>
-    </div>
-    <script src="traductionboutons.js"></script>
+        <p>&#169; RT2 G3 All Rights Reserved 2023</p>
+    </div>	
 </body>
+<script src="traductionboutons.js"></script>
+<script src="search.js"></script>
 </html>
-
-
-
-
-
