@@ -18,27 +18,29 @@
 </head>
 <body>
 <header>
-        <a href="#about" class="logo">
-            <img src="image/logo.png" alt="">
+        <a href="./home.php #about" class="logo">
+            <img src="images/logo.png" alt="">
         </a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <ul class="navbar">
-            <li id="home"><a href="./Coffee-Shop-Website-main/index.html">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li id="reviews"><a href="#customers">Reviews</a></li>
-            <li><a href="#about">PLAY</a></li>
-            <li id="join"><a href="#join">JOIN US</a></li>
-            <li id="abouticon"><a href="#about">About</a></li>
+            <li id="home"><a href="./home.php">Home</a></li>
+            <li><a href="./home.php #products">Products</a></li>
+            <li id="reviews"><a href="./home.php #customers">Reviews</a></li>
+            <li><a href="./kyufi game.php">PLAY</a></li>
+            <li id="join"><a href="./joinus.php">JOIN US</a></li>
+            <li id="abouticon"><a href="./home.php #about">About</a></li>
         </ul>
         <div class="header-icons">
             <button><i class="fas fa-shopping-cart" id="cart-btn"></i>  0</button>
             <button><i class="fas fa-search" id="search-btn"></i></button>
             <input type="text" style="border-radius: 500px; padding: 8px; color: black;" placeholder="Search drinks, stores...">
             <button id="lang"><i class="fas fa-globe"></i></button>  
-            <button id="user"><i class="fa-solid fa-user"></i></button> 
+            <a href=<?php if(!(isset($_COOKIE['user_uid']))||!(isset($_COOKIE['user_id']))){ echo "./login.php";} 
+            else{
+                echo "./userinfo.php";
+            } ?>><button id="user"><i class="fa-solid fa-user"></i></button></a>
         </div> 
     </header>
-
 
 
 

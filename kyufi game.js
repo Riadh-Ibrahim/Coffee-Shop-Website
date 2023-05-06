@@ -1,3 +1,4 @@
+
 var coufiS = 85;
 var coufiXpos;
 var coufiXspeed = 4.3;
@@ -33,9 +34,9 @@ var sfx = {
 function preload() {
 
     font=loadFont("fonts/SunnyspellsRegular-MV9ze.otf");
-    coufiImage= loadImage("images/kyufi .png");
-    platImage = loadImage("images/game platform.png");
-    backgroundImage = loadImage("images/game background.png");
+    coufiImage= loadImage("kyufi .png");
+    platImage = loadImage("game platform.png");
+    backgroundImage = loadImage("game background.png");
 }
 
 function setup() {
