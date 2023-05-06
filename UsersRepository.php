@@ -77,5 +77,12 @@ class UsersRepository extends Repository
         $reponse->execute([$id]);
         return $reponse->fetch(PDO::FETCH_ASSOC);
 
+    }
+
+    public function delete($id) {
+        $request = "DELETE  from users where users_id = ?";
+        $reponse = $this->db->prepare($request);
+        $reponse->execute([$id]);
     }}
+
 ?>
