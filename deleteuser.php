@@ -1,11 +1,16 @@
 <?php
 
-// On ouvre la session ici
+session_start();
+include('isConnected.php');
 include('UsersRepository.php');
-//$id = htmlspecialchars($_GET['users_id']);
+$user_id=$_SESSION['userid'];
 $userRepository = new UsersRepository();
-$user = $userRepository->delete('8');
-header("Location:join.php" );
+$user = $userRepository->delete($user_id);
+
+
+include('logout.inc.php');
+
+
 
 
 ?>

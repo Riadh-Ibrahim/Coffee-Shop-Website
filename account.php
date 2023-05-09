@@ -1,12 +1,24 @@
 <?php
 include('UsersRepository.php');
-//session_start();
-// $user_id=$_SESSION['userid'];
+include('isConnected.php');
+session_start();
+ $user_id=$_SESSION['userid'];
 $uspro= new UsersRepository();
-$item=$uspro->findUserById('44');
+$item=$uspro->findUserById($user_id);
 ?>
 
+<?php
 
+include_once './CartRepository.php';
+
+$cartrepo = new CartRepository();
+if(isset($_COOKIE["user_id"])&&($cartrepo->findNProductsById(intval($_COOKIE["user_id"]))>0)){
+
+$nproducts = $cartrepo->findNProductsById(intval($_COOKIE["user_id"]));
+} else {
+    $nproducts=0;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +28,8 @@ $item=$uspro->findUserById('44');
     <title>Profile Page</title>
 
     <!-- Custom Css -->
-    <link rel="stylesheet" href="accountstyle.css">
-    <link rel="stylesheet" href="../Coffee-Shop-Website-main/styles/home.css">
+    <link rel="stylesheet" href="./styles/accountstyle.css">
+    <link rel="stylesheet" href="./styles/home.css">
 
     <!-- FontAwesome 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
@@ -29,22 +41,22 @@ $item=$uspro->findUserById('44');
         </a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <ul class="navbar">
-            <li id="home"><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li id="reviews"><a href="#customers">Reviews</a></li>
-            <li><a href="./kyufi game.html">PLAY</a></li>
-            <li id="join"><a href="">JOIN US</a></li>
-            <li id="abouticon"><a href="#about">About</a></li>
+        <li id="home"><a href="./home.php #home">Home</a></li>
+            <li><a href="./home.php #products">Products</a></li>
+            <li id="reviews"><a href="./home.php #customers">Reviews</a></li>
+            <li><a href="./kyufi game.php">PLAY</a></li>
+            <li id="join"><a href="./joinus.php">JOIN US</a></li>
+            <li id="abouticon"><a href="./home.php #about">About</a></li>
         </ul>
         <div class="header-icons">
-            <button id="shopping"><i class="fas fa-shopping-cart" id="cart-btn"></i><span id="cart-count"> 0</span></button>
-            <script>
+        <button id="shopping"><i  class="fas fa-shopping-cart" id="cart-btn"></i><span id="cart-count"> <?php echo $nproducts ?> </span></button>
+
+        <script>
                     const cartButton = document.querySelector('#shopping');
                     cartButton.addEventListener('click', () => {
-                    window.location.href = 'shopping cart.html';
+                    window.location.href = 'commander.php';
                     });
             </script>
-                
             <button id="search-btn"><i class="fas fa-search" ></i></button>
             <input id="search-input" onkeyup="search()" type="text" placeholder="Search drinks, stores...">
             <button id="lang"><i class="fas fa-globe"></i></button>  
@@ -55,7 +67,7 @@ $item=$uspro->findUserById('44');
     <!-- Sidenav -->
     <div class="sidenav">
         <div class="profile">
-            <img src="./emna.jpg" alt="" >
+            <img src="./images/emna.jpg" alt="" >
 
             <div class="name">
             <?php  echo $item ['users_uid']; 
@@ -69,7 +81,7 @@ $item=$uspro->findUserById('44');
                 <hr align ="center">
             </div>
             <div class="url">
-                <a href="#settings">Settings</a>
+                <a href="./UpdataUser.php">Settings</a>
                 <hr align  ="center">
             </div>
         </div>
@@ -107,7 +119,7 @@ $item=$uspro->findUserById('44');
                         <tr>
                             <td>Point Count</td>
                             <td>:</td>
-                            <td>5100</td>
+                            <td><?php echo $item['users_points']?></td>
                         </tr>
                         <tr>
                             <td>Phone Number</td>
