@@ -487,6 +487,11 @@ section{
     background-color: #8a6f4dad;
 }
 
+.header-btn{
+    padding:10px;
+    height:39px;
+}
+
 @media(max-width:1700px){
     header{
         padding: 7px 30px;
