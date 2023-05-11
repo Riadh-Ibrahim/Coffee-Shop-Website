@@ -15,20 +15,20 @@ window.onclick = function(e) {
     console.log(e.target.tagName)
     console.log('dropdown');
     console.log(activeDropdown)
-    if (e.target.tagName === 'LI' && activeDropdown){
+   if (e.target.tagName === 'LI' && activeDropdown){
         if (e.target.innerHTML === 'Master Card') {
-            document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/2vbqk5lcpi7hjoc/MasterCard_Logo.svg.png';
+            document.getElementById('credit-card-image').src = './images/master.png';
             activeDropdown.classList.remove('visible');
             activeDropdown = null;
             e.target.innerHTML = document.getElementById('current-card').innerHTML;
             document.getElementById('current-card').innerHTML = 'Master Card';
         }
-        else if (e.target.innerHTML === 'American Express') {
-            document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/f5hyn6u05ktql8d/amex-icon-6902.png';
+        else if (e.target.innerHTML === 'E-Dinar Card') {
+            document.getElementById('credit-card-image').src = './images/edinar.png';
             activeDropdown.classList.remove('visible');
             activeDropdown = null;
             e.target.innerHTML = document.getElementById('current-card').innerHTML;
-            document.getElementById('current-card').innerHTML = 'American Express';
+            document.getElementById('current-card').innerHTML = 'E-Dinar Card';
         }
         else if (e.target.innerHTML === 'Visa') {
             document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png';
