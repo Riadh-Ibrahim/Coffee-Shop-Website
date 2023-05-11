@@ -10,7 +10,6 @@ $revrepo= new ReviewRepository();
  if (isset($_POST['comment'])) {
   $reviewcontent = $_POST['comment'];
   $revinfo=array(
-    'review_id'=>$_COOKIE["user_id"],
     'users_id'=>$_COOKIE["user_id"],
     'review_date'=>date("Y-m-d"),
     'review_content'=>$reviewcontent
