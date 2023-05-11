@@ -12,7 +12,6 @@ $cartrepo = new CartRepository();
 $price=$_COOKIE['totalfinal'];
 $cartrepo->delete($_COOKIE["user_id"]);
 $commandeinfo=array(
-    'commande_id'=>$_COOKIE["user_id"],
     'users_id'=>$_COOKIE["user_id"],
     'commande_date'=>date("Y-m-d"),
     'price'=>$price
