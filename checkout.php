@@ -49,11 +49,8 @@ if (isset($checkoutsubmit)) {
     $subject = 'KYUFI ORDER';
 
 
-    $body=nl2br("Hello dear customer, \n You have now passed your order. A few minutes and it will be there.\n".
-    "Order details : ".
-    "\nName: ".$name .
-    "\nPhone number: " .$phone.
-    "\nOrder description: ".$description);
+    $body=nl2br("Hello dear customer, You have now passed your order. A few minutes and it will be there. And here are your Order details : Name: $name . Phone number: $phone. Order description: $description. Thank you for choosing KYUFI .");
+
 
     $mail = new PHPMailer(true);
     
