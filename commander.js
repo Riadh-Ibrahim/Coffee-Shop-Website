@@ -23,12 +23,12 @@ window.onclick = function(e) {
             e.target.innerHTML = document.getElementById('current-card').innerHTML;
             document.getElementById('current-card').innerHTML = 'Master Card';
         }
-        else if (e.target.innerHTML === 'E-Dinar Card') {
+        else if (e.target.innerHTML === 'E-DINAR Card') {
             document.getElementById('credit-card-image').src = './images/edinar.png';
             activeDropdown.classList.remove('visible');
             activeDropdown = null;
             e.target.innerHTML = document.getElementById('current-card').innerHTML;
-            document.getElementById('current-card').innerHTML = 'E-Dinar Card';
+            document.getElementById('current-card').innerHTML = 'E-DINAR Card';
         }
         else if (e.target.innerHTML === 'Visa') {
             document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png';
