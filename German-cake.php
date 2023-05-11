@@ -1,3 +1,15 @@
+<?php
+
+include_once './CartRepository.php';
+
+$cartrepo = new CartRepository();
+if(isset($_COOKIE["user_id"])&&($cartrepo->findNProductsById(intval($_COOKIE["user_id"]))>0)){
+
+$nproducts = $cartrepo->findNProductsById(intval($_COOKIE["user_id"]));
+} else {
+    $nproducts=0;
+}
+?>
 <?php 
 session_start();
 include "isConnected.php";
