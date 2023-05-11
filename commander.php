@@ -175,8 +175,8 @@ if ($nproducts > 0) {
                 <div class='dropdown-btn' id='current-card'>Visa</div>
                 <div class='dropdown-select'>
                   <ul>
-                    <li>BANCAIRE</li>
-                    <li>E-DINAR</li>
+                    <li>Master Card</li>
+                    <li>E-DINAR Card</li>
                   </ul>
                 </div>
               </div>
