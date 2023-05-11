@@ -127,7 +127,7 @@ $nproducts = $cartrepo->findNProductsById(intval($_COOKIE["user_id"]));
             <h6 class="text-muted ml-2"><del>8 DT</del></h6>
             <span></span>
               
-            <a href="add_to_cart_function.php?prodselected=9" class="cart-btn">Add to cart</a>
+            <a href="add_to_cart_function.php?prodselected=1" class="cart-btn">Add to cart</a>
           </div>
         </div>
 
