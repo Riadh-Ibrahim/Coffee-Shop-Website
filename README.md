@@ -12,5 +12,3 @@ Web application for **Kyufi** Coffee shop, offering a unique blend of coffee and
 ![Screenshot 2024-06-12 164647](https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/assets/110717872/bdf1cc7a-3ccc-4a29-9e1c-f395a6988a28)
 
 ![Screenshot 2024-06-12 164708](https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/assets/110717872/81acf6e5-8dd9-4cdd-be74-9cbac191d9b4)
-
-![Screenshot 2024-06-12 165139](https://github.com/Riadh-Ibrahim/Coffee-Shop-Website/assets/110717872/7b8cdee1-6cff-4103-903f-2e0f9b595753)
