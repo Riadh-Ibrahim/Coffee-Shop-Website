@@ -28,9 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `cart_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL
+  `product_id` int(11) NOT NULL,
+  PRIMARY KEY (`cart_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -165,7 +166,7 @@ CREATE TABLE `users` (
   `users_uid` tinytext NOT NULL,
   `users_pwd` longtext NOT NULL,
   `users_email` tinytext NOT NULL,
-  `users_tel` int(11) NOT NULL,
+  `users_tel` varchar(20) NOT NULL,
   `users_points` int(11) DEFAULT 0,
   `users_address` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

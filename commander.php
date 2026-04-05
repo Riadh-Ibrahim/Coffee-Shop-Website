@@ -151,16 +151,9 @@ if ($nproducts > 0) {
             </span>
                       <span style='float:right; text-align:right;'>
               <div class='thin dense'><?php echo $userpts ?></div>
-              <b><div class='thin dense' ><?php echo "DT  ".$delivery ?></div>DT<span id='total'>
-              
-              <?php  echo $totalfinal ?></b>
-              
+              <b><div class='thin dense'><?php echo "DT  ".$delivery ?></div>DT<span id='total'><?php echo $totalfinal ?></span></b>
               </span>
-              <script>
-              let totalfinal=document.getElementById("total").innerText ;
-              document.cookie="totalfinal="+ totalfinal;</script>
-              </span>
-              </div>
+          </div>
           
       </div>
       

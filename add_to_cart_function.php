@@ -7,16 +7,15 @@ $cartrepo= new CartRepository();
 $prodrepo= new ProductRepository();
 $usercart = $cartrepo->findCartById($_COOKIE["user_id"]);
 
- if (isset($_GET['prodselected'])) {
+ if (isset($_GET['prodselected']) && isset($_COOKIE['user_id'])) {
   $product = $_GET['prodselected'];
   $cartinfo=array(
-    'cart_id'=>$_COOKIE["user_id"],
     'user_id'=>$_COOKIE["user_id"],
     'product_id'=>$product
-    );
-    $cartrepo->create($cartinfo);
-    header("Location: ./products-page-2.php");
-    exit;
+  );
+  $cartrepo->create($cartinfo);
+  header("Location: ./Products-Page-2.php");
+  exit;
 }
 
 ?>

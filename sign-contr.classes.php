@@ -17,7 +17,7 @@ class SignupContr extends SignUp{
         $this->pwd=$pwd;
         $this->pwdRepeat=$pwdRepeat;
         $this->email=$email;
-        $this->tel=$tel;
+        $this->tel = $tel;
        //$this->city=$city;
         $this->address=$address;
     }
@@ -105,7 +105,8 @@ class SignupContr extends SignUp{
 
     private function invalidTel(){
         $result=false;
-        if(!preg_match('/^[0-9]{8}+$/',$this->tel)){
+        $cleanTel = preg_replace('/\D+/', '', $this->tel);
+        if(!preg_match('/^[0-9]{10}$/',$cleanTel)){
             $result=false;
         } else {
             $result=true;
